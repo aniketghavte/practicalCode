@@ -1,0 +1,17 @@
+use ts //create database
+
+ db.createCollection("pract1") //create collection
+  
+ db.pract1.insertMany([{name:"Tejas",age:20},{name:"Shreyas",age:16},{name:"Shivtej",age:21}])
+
+ db.pract1.find()
+ db.pract1.find({ _id: ObjectId("65471978fd90c96379900e6a")})//find specific object.
+
+ db.pract1.updateOne({ _id: ObjectId("65471978fd90c96379900e6a")},{$set:{class:"10"}})
+
+db.pract1.deleteOne({name:"Shivtej"})
+
+ db.pract1.deleteMany({age:20})
+
+
+

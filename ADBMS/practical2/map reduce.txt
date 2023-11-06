@@ -1,0 +1,22 @@
+use aggre
+
+ db.aggre.insertMany([{name:"pratik",marks:40,age:20},{name:"sachin",marks:50,age:20},{name:"virat",marks:30,age:18},{name:"dhoni",marks:50,age:21},{name:"AK",marks:60,age:21}])
+
+db.aggre.find()
+
+var mapf=function(){emit(this.age,this.marks)}
+
+var reducef=function(key,values){return Array.sum(values)}
+
+db.aggre.mapReduce(mapf,reducef,{out:"res"})
+
+db.res.find()
+
+//Avg
+var mapf=function(){emit(this.age,this.marks)}
+
+var reducef=function(key,values){return Array.avg(values)}
+
+db.aggre.mapReduce(mapf,reducef,{out:"res2"})
+
+db.res2.find()

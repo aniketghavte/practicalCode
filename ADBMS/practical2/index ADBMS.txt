@@ -1,0 +1,60 @@
+//index
+
+use info
+
+ db.info.insertMany([{name:"pratik",marks:40,age:20},{name:"sachin",marks:50,age:20},{name:"virat",marks:30,age:18}])
+
+
+db.info.find()
+
+ db.info.createIndex({age:18})
+
+
+ db.info.insertMany([{cid:1,name:"pratik",age:18},{cid:2,name:"krishinfo> db.info.insertMany([{cid:1,name:"pratik",age:18},{cid:2,name:"krish",age:19},{cid:3,name:"virat",age:21},{cid:4,name:"sachin",age:56},{cid:5,name:"mohit",age:80}])
+
+
+ db.info.createIndex({cid:-1,name:1})
+
+db.info.getIndexes()
+
+
+db.info.dropIndex({cid:1})
+
+
+db.info.getIndexes()
+
+
+db.info.dropIndex({cid:-1,name:1})
+
+
+db.info.getIndexes()
+
+
+db.info.find()
+
+
+db.info.createIndex({cid:1},{unique:true})
+
+
+db.info.insert({cid:1,name:"sunny"})
+
+
+db.info.insert({cid:1,name:"sunny"})
+
+
+db.info.insert({cid:1,name:"honey"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+use demo
+
+db.demo.insertMany([{item:'pasta',amt:40,cust:'pratik'},{item:'milk',amt:60,cust:'krish'},{item:'pizza',amt:150,cust:'hari'},{item:'pasta',amt:40,cust:'sara'},{item:'pizza',amt:150,cust:'amit'}])
+
+
+db.demo.aggregate([{$group:{_id:"$item",total:{$sum:"$amt"}}}])
+
+
+ db.demo.aggregate([{$group:{_id:"$item",total:{$sum:"1"}}}])
+
+
+
+db.demo.aggregate([{$group:{_id:"$item",total:{$sum:1}}}])
+
+
+
+ db.demo.aggregate([{$group:{_id:"$item",total:{$avg:"$amt"}}}])
