@@ -1,6 +1,0 @@
-db.adbms.find({ category: "sports" })
-
- db.adbms.find({ $or: [{ category: "Sports" }, { price: { $lt: 50 } } ]})
-
- db.cheat.find({ $and: [{ category: "Sports" }, { price: { $lt: 50 } } ]})
-db.cheat.find({ category: { $ne: "Clothing" } })
